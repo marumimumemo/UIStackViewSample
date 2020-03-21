@@ -33,6 +33,8 @@ final class ViewController: UIViewController {
         siteDescriptionLabel.isHidden = !siteDescriptionLabel.isHidden
         if siteDescriptionLabel.isHidden {
             siteButton.setTitle("表示", for: .normal)
+        } else {
+            siteButton.setTitle("非表示", for: .normal)
         }
     }
     
@@ -40,13 +42,17 @@ final class ViewController: UIViewController {
         spotDescriptionLabel.isHidden = !spotDescriptionLabel.isHidden
         if spotDescriptionLabel.isHidden {
             spotButton.setTitle("表示", for: .normal)
+        } else {
+            spotButton.setTitle("非表示", for: .normal)
         }
     }
     
     @IBAction func weatherDescriptionOpenButtonTapped(_ sender: Any) {
         weatherDescriptionLabel.isHidden = !weatherDescriptionLabel.isHidden
         if weatherDescriptionLabel.isHidden {
-            spotButton.setTitle("表示", for: .normal)
+            weatherButton.setTitle("表示", for: .normal)
+        } else {
+            weatherButton.setTitle("非表示", for: .normal)
         }
     }
 }
