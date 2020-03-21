@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,140 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIStackViewSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="cox-E6-tvX">
+                                <rect key="frame" x="50" y="94" width="314" height="66.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-MU-kqZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京はどんな都市？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-xL-2mX">
+                                                <rect key="frame" x="0.0" y="0.0" width="156" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="JhZ-4a-Qfj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-FX-s0X">
+                                                <rect key="frame" x="182" y="0.0" width="46" height="20"/>
+                                                <state key="normal" title="非表示"/>
+                                                <state key="selected" title="表示"/>
+                                                <connections>
+                                                    <action selector="siteDescriptionOpenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsx-Ma-QrU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都市概要文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-S3-8oa">
+                                        <rect key="frame" x="0.0" y="46" width="87" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="kGs-Fb-kM7">
+                                <rect key="frame" x="50" y="180.5" width="314" height="67.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="S7O-Gb-Z08">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あしたの天気は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUw-9g-iz6" userLabel="天気">
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="eVT-1V-nLT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-yg-GvJ" userLabel="表示">
+                                                <rect key="frame" x="166" y="0.0" width="46" height="20"/>
+                                                <state key="normal" title="非表示"/>
+                                                <state key="selected" title="表示"/>
+                                                <connections>
+                                                    <action selector="weatherDescriptionOpenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMr-Xb-N5m"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天気概要文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-aI-jj3" userLabel="概要文">
+                                        <rect key="frame" x="0.0" y="47" width="87" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="czv-jM-Bax">
+                                <rect key="frame" x="50" y="268" width="314" height="58.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-Z5-XT4">
+                                        <rect key="frame" x="0.0" y="0.0" width="227.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おすすめの観光地は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScU-dD-udw">
+                                                <rect key="frame" x="0.0" y="5" width="173.5" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="dG2-Ij-LAg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9go-Ew-M33">
+                                                <rect key="frame" x="181.5" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="非表示"/>
+                                                <state key="selected" title="表示"/>
+                                                <connections>
+                                                    <action selector="spotDescriptionOpenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4i8-dv-fUo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="観光地概要文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4v-50-Fll">
+                                        <rect key="frame" x="0.0" y="38" width="104" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kGs-Fb-kM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6bx-OZ-Ghm"/>
+                            <constraint firstItem="czv-jM-Bax" firstAttribute="top" secondItem="kGs-Fb-kM7" secondAttribute="bottom" constant="20" id="Hdz-HO-To1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cox-E6-tvX" secondAttribute="trailing" constant="50" id="N1L-v4-B7c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kGs-Fb-kM7" secondAttribute="trailing" constant="50" id="PmZ-zz-JVn"/>
+                            <constraint firstItem="cox-E6-tvX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="QiU-6R-hcC"/>
+                            <constraint firstItem="kGs-Fb-kM7" firstAttribute="top" secondItem="cox-E6-tvX" secondAttribute="bottom" constant="20" id="f2v-PB-keJ"/>
+                            <constraint firstItem="czv-jM-Bax" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="jSl-i7-GS5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="czv-jM-Bax" secondAttribute="trailing" constant="50" id="mUH-IK-MtE"/>
+                            <constraint firstItem="cox-E6-tvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="rMQ-SA-NiY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="siteButton" destination="sW6-FX-s0X" id="o4a-NX-9Nd"/>
+                        <outlet property="siteDescriptionLabel" destination="CWV-S3-8oa" id="grD-a2-9N4"/>
+                        <outlet property="siteLabel" destination="eFF-xL-2mX" id="naN-Eh-TP2"/>
+                        <outlet property="spotButton" destination="9go-Ew-M33" id="HGp-aU-I4l"/>
+                        <outlet property="spotDescriptionLabel" destination="g4v-50-Fll" id="Evf-bv-u9D"/>
+                        <outlet property="spotLabel" destination="ScU-dD-udw" id="4A1-Bx-Myl"/>
+                        <outlet property="weatherButton" destination="Gx6-yg-GvJ" id="bSK-Sc-UbA"/>
+                        <outlet property="weatherDescriptionLabel" destination="wdM-aI-jj3" id="EwP-4Q-fYv"/>
+                        <outlet property="weatherLabel" destination="bUw-9g-iz6" id="4mx-tV-tyn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
         </scene>
     </scenes>
 </document>
